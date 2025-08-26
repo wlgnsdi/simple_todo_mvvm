@@ -12,6 +12,12 @@ class HomeViewmodel extends Notifier<List<Todo>> {
   addTodo(Todo todo) {
     state = [todo, ...state];
   }
+
+  void editTodo() {}
+
+  void deleteTodo(int index) {
+    // state =
+  }
 }
 
 var homeViewmodelProvider = NotifierProvider<HomeViewmodel, List<Todo>>(

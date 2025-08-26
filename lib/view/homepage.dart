@@ -45,8 +45,18 @@ class _HomePageState extends ConsumerState<HomePage> {
                         ],
                       ),
                     ),
-                    IconButton(onPressed: () {}, icon: Icon(Icons.edit)),
-                    IconButton(onPressed: () {}, icon: Icon(Icons.delete)),
+                    IconButton(
+                      onPressed: () {
+                        viewModel.editTodo();
+                      },
+                      icon: Icon(Icons.edit),
+                    ),
+                    IconButton(
+                      onPressed: () {
+                        viewModel.deleteTodo(index);
+                      },
+                      icon: Icon(Icons.delete),
+                    ),
                   ],
                 );
               },
